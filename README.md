@@ -2,7 +2,7 @@
 this is first ML project
 
 ### software requirements
-1.  [GIT Documentation] (https://git-scm.com/docs/gittutorial)
+1.  [GIT Documentation](https://git-scm.com/docs/gittutorial)
 
 
 
