@@ -1,6 +1,11 @@
 # machine_learning_project
 this is first ML project
 
+### software requirements
+1.  [GIT Documentation] (https://git-scm.com/docs/gittutorial)
+
+
+
 conda create -p venv python==3.7 -y
 
 conda activate venv/ --- to activate virtual environment
