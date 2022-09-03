@@ -63,4 +63,7 @@ docker stop <cointainer_id>
 ```
 
 
-
+```
+python setup.py install
+```
+no need to write pip install -r requirement.txt, if we write python setup.py install
