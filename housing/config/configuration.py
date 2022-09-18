@@ -1,10 +1,11 @@
-from housing.entity.config_entity import DataingestionConfig, DataTransformationConfig,DataValidationConfig,   \
+from housing.entity.config_entity import DataIngestionConfig, DataTransformationConfig,DataValidationConfig,   \
 ModelTrainerConfig,ModelEvaluationConfig,ModelPusherConfig,TrainingPipelineConfig
 from housing.util.util import read_yaml_file
 from housing.logger import logging
 import sys,os
 from housing.constant import *
 from housing.exception import HousingException
+
 
 class Configuartion:
 
@@ -20,7 +21,7 @@ class Configuartion:
             raise HousingException(e,sys) from e
 
 
-    def get_data_ingestion_config(self) ->DataingestionConfig:
+    def get_data_ingestion_config(self) ->DataIngestionConfig:
         try:
             artifact_dir = self.training_pipeline_config.artifact_dir
             data_ingestion_artifact_dir=os.path.join(
@@ -53,7 +54,7 @@ class Configuartion:
             )
 
 
-            data_ingestion_config=DataingestionConfig(
+            data_ingestion_config=DataIngestionConfig(
                 dataset_download_url=dataset_download_url, 
                 tgz_download_dir=tgz_download_dir, 
                 raw_data_dir=raw_data_dir, 
