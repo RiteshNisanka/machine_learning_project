@@ -160,6 +160,8 @@ class Configuartion:
                 self.time_stamp
             )
             model_trainer_config_info = self.config_info[MODEL_TRAINER_CONFIG_KEY]
+            # model_trainer_config_info is also a dict, we got from - config_info dict
+            # nested dict concept
             trained_model_file_path = os.path.join(model_trainer_artifact_dir,
             model_trainer_config_info[MODEL_TRAINER_TRAINED_MODEL_DIR_KEY],
             model_trainer_config_info[MODEL_TRAINER_TRAINED_MODEL_FILE_NAME_KEY]
@@ -176,6 +178,7 @@ class Configuartion:
                 base_accuracy=base_accuracy,
                 model_config_file_path=model_config_file_path
             )
+            # model_trainer_config is the object of ModelTrainerConfig (named tuple), declared in config_entity
             logging.info(f"Model trainer config: {model_trainer_config}")
             return model_trainer_config
         except Exception as e:
